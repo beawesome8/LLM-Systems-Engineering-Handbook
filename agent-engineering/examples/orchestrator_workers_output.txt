@@ -1,0 +1,4 @@
+merged report:
+- pricing.md: Pro plan is $20/user/month
+- security.md: Data is encrypted at rest with AES-256
+failed workers: {'support.md': 'support.md is empty'}

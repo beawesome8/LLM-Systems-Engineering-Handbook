@@ -1,0 +1,4 @@
+strategy                         chunks  recall@1  recall@3
+fixed 100 chars, no overlap          15      0.17      0.33
+fixed 100 chars, 30 overlap          21      0.50      0.67
+paragraph                            12      0.83      0.83

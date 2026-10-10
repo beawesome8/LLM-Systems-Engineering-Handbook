@@ -1,0 +1,25 @@
+=== budget 400 tokens -> used 163 ===
+-- system (35 tok)
+You are a support assistant for Acme Cloud. Answer only from the provided documents and cite the doc id. If the answer is not in them, say so.
+-- docs (52 tok)
+[kb-1] Refunds are available within 30 days of purchase for annual plans. Monthly plans are not refundable.
+[kb-5] Annual plans renew automatically. Cancel at least 7 days before renewal to avoid being charged.
+-- history (67 tok)
+[summary of 3 earlier turns: Hi, I'm on the annual plan; Thanks for reaching out! I'd be; I bought it 10 days ago]
+assistant: I'm sorry to hear that. Let me see which options are available to you.
+user: Can I get my money back for the annual plan I bought 10 days ago?
+-- query (9 tok)
+Can I get a refund for my annual plan?
+
+=== budget 120 tokens -> used 112 ===
+-- system (35 tok)
+You are a support assistant for Acme Cloud. Answer only from the provided documents and cite the doc id. If the answer is not in them, say so.
+-- docs (1 tok)
+
+-- history (67 tok)
+[summary of 3 earlier turns: Hi, I'm on the annual plan; Thanks for reaching out! I'd be; I bought it 10 days ago]
+assistant: I'm sorry to hear that. Let me see which options are available to you.
+user: Can I get my money back for the annual plan I bought 10 days ago?
+-- query (9 tok)
+Can I get a refund for my annual plan?
+

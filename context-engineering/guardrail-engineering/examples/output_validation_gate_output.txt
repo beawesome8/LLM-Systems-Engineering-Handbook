@@ -1,0 +1,15 @@
+input_guard: True | False
+OK              gate=pass  (ok) :: {"intent":"refund_allowed","days":30,"evidence":"annual plan
+OK              gate=pass  (ok) :: {"intent":"refund_denied","days":null,"evidence":"Monthly pl
+OK              gate=pass  (ok) :: {"intent":"unknown","days":null,"evidence":"Refunds are issu
+OK              gate=block (not valid JSON) :: Sure! Refunds are allowed for 30 days.
+OK              gate=block (days not supported by evidence) :: {"intent":"refund_allowed","days":60,"evidence":"annual plan
+OK              gate=block (intent not in enum) :: {"intent":"maybe","days":30,"evidence":"annual plans can be 
+OK              gate=block (evidence not found in source) :: {"intent":"refund_allowed","days":30,"evidence":"all plans a
+OK              gate=block (wrong keys) :: {"intent":"refund_allowed","days":30}
+OK              gate=block (wrong keys) :: 42
+FALSE-NEGATIVE  gate=pass  (ok) :: {"intent":"refund_allowed","days":null,"evidence":"Monthly p
+FALSE-POSITIVE  gate=block (evidence not found in source) :: {"intent":"refund_allowed","days":30,"evidence":"annual plan
+
+false positives: 1/4 good answers blocked
+false negatives: 1/7 bad answers let through

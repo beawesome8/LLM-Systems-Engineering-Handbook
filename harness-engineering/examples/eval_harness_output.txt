@@ -1,0 +1,4 @@
+v1: 2/4 pass  {'refund-annual': True, 'refund-month': False, 'invoice': True, 'sso': False}
+v2: 3/4 pass  {'refund-annual': True, 'refund-month': True, 'invoice': False, 'sso': True}
+fixed by v2:     ['refund-month', 'sso']
+regressed in v2: ['invoice']   <- a higher average can still hide this

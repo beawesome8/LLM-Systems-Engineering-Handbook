@@ -1,0 +1,10 @@
+1) recovers after two transient errors
+  attempt 1 failed (429 rate limited); waiting 0.42s
+  attempt 2 failed (503); waiting 0.76s
+  -> ok: answer
+2) permanent error is not retried
+  -> raised immediately: 401 bad key
+3) gives up after max_attempts
+  attempt 1 failed (timeout); waiting 0.21s
+  attempt 2 failed (timeout); waiting 0.26s
+  -> gave up after 3 attempts: timeout

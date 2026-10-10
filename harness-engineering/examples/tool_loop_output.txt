@@ -1,0 +1,12 @@
+approved:
+  step 1: get_order({'order_id': 'A1'}) -> {'id': 'A1', 'status': 'shipped', 'total': 42.0}
+  step 2: refund_order({'order_id': 'A1'}) -> {'id': 'A1', 'refunded': True}
+  -> Order A1 has been refunded.
+denied:
+  step 1: refund_order({'order_id': 'A1'}) -> {'error': 'denied by human reviewer'}
+  -> I could not refund it; a human declined.
+runaway model hits the step limit:
+  step 1: get_order({'order_id': 'A1'}) -> {'id': 'A1', 'status': 'shipped', 'total': 42.0}
+  step 2: get_order({'order_id': 'A1'}) -> {'id': 'A1', 'status': 'shipped', 'total': 42.0}
+  step 3: get_order({'order_id': 'A1'}) -> {'id': 'A1', 'status': 'shipped', 'total': 42.0}
+  -> STOPPED: max_steps reached

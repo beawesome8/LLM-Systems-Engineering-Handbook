@@ -1,0 +1,4 @@
+retriever              recall@1
+sparse (tf-idf)        5/6
+dense (toy trigram)    5/6
+hybrid (RRF)           5/6
